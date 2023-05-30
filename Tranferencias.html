@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Transferência</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f1f1f1;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      max-width: 380px;
+      margin: 22px auto;
+      padding: 22px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    input[type="submit"] {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Transferência</h1>
+
+  <form action="/realizar_transferencia" method="POST">
+    <label for="origem">Conta de origem:</label>
+    <input type="text" id="origem" name="origem" required>
+
+    <label for="destino">Conta de destino:</label>
+    <input type="text" id="destino" name="destino" required>
+
+    <label for="valor">Valor da transferência:</label>
+    <input type="number" id="valor" name="valor" min="0" required>
+
+    <input type="submit" value="Realizar transferência">
+  </form>
+</body>
+</html>
